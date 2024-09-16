@@ -27,7 +27,7 @@ public class ClubServiceImpl implements ClubService {
                  .collect(Collectors.toList());
     }
 
-    private ClubDto mapToClubDto(Club club) {
+    private ClubDto mapToClubDto(Club club) {  // Club в ClubDto
         ClubDto clubDto = ClubDto.builder()
                 .id(club.getId())
                 .title(club.getTitle())
