@@ -1,6 +1,7 @@
 package com.springmvc.web.controller;
 
 import com.springmvc.web.dto.ClubDto;
+import com.springmvc.web.model.Club;
 import com.springmvc.web.service.ClubService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,6 +25,13 @@ public class ClubController {
         List<ClubDto> clubs = clubService.findAllClubs();
         model.addAttribute("clubs", clubs);
         return "clubs-list";
+    }
+
+    @GetMapping("/clubs/new")
+    public String createClubForm(Model model) {
+        Club club = new Club();
+        model.addAttribute("club", club);
+        return "clubs-create";
     }
 
 }
