@@ -8,7 +8,7 @@
     <link th:href="@{/css/styles.css}" rel="stylesheet">
     <title layout:title-pattern="$CONTENT-TITLE - $LAYOUT_TITLE">TestPage</title>
 </head>
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+<nav style="background: #675858; background-color: #675858;" class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container px-4 px-lg-5">
         <a class="navbar-brand" href="#page-top">Test Name</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,6 +20,7 @@
                 <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="#projects">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#signup">Find Clubs</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{clubs/new}">Create running club</a></li>
             </ul>
         </div>
     </div>

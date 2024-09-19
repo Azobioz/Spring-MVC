@@ -29,6 +29,11 @@ public class ClubServiceImpl implements ClubService {
                  .collect(Collectors.toList());
     }
 
+    @Override
+    public Club saveClub(Club club) {
+        return clubRepository.save(club);
+    }
+
     private ClubDto mapToClubDto(Club club) {  // Club в ClubDto
         ClubDto clubDto = ClubDto.builder()
                 .id(club.getId())
