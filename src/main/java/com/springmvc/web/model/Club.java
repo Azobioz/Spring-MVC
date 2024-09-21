@@ -1,6 +1,10 @@
 package com.springmvc.web.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -33,7 +37,6 @@ public class Club {
 
     @UpdateTimestamp
     private LocalDateTime updateOn;
-
 
 
 }

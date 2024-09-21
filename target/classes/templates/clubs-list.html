@@ -35,11 +35,12 @@
             <div class="col-lg-6"><img class="img-fluid" th:src="${club.photoUrl}" alt="..." /></div>
             <div class="col-lg-6">
                 <div class="bg-black text-center h-100 project">
-                    <div class="d-flex h-100">
+                    <div class="d-flex h-100    ">
                         <div class="project-text w-100 my-auto text-center text-lg-left">
-                            <h4 class="text-white">Misty</h4>
+                            <h4 class="text-white"></h4>
                             <p th:text="${club.title}" class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
                         </div>
+                        <a class="btn btn-primary" th:href="@{/clubs/{clubId}/edit(clubId=${club.id})}">Edit</a>
                     </div>
                 </div>
             </div>
