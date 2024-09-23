@@ -36,7 +36,7 @@ public class Club {
     @UpdateTimestamp
     private LocalDateTime updateOn;
 
-    @OneToMany(mappedBy = "club", cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "club", cascade = CascadeType.REMOVE) // у одного клуба может быть много событий.
     private Set<Event> events = new HashSet<>();
 
 
