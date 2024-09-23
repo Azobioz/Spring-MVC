@@ -34,7 +34,7 @@ public class Event {
     private LocalDateTime updatedOn;
 
 
-    @ManyToOne
+    @ManyToOne // Много события у одного клуба
     @JoinColumn(name="club_id", nullable = false)
     private Club club;
 
