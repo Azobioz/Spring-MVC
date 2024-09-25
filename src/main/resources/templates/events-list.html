@@ -42,7 +42,7 @@
                             <h4 class="text-white"></h4>
                             <p th:text="${event.name}" class="mb-0 text-white-50"></p>
                         </div>
-                        <a class="btn btn-primary">View</a>
+                        <a class="btn btn-primary" th:href="@{/events/{eventId}(eventId=${event.id})}">View</a>
                         <a class="btn btn-primary">Edit</a>
                     </div>
                 </div>
