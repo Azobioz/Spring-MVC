@@ -1,6 +1,7 @@
 package com.springmvc.web.dto;
 
 
+import com.springmvc.web.model.Club;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -27,6 +28,7 @@ public class EventDto {
     private String photoUrl;
     private LocalDateTime createdOn;
     private LocalDateTime updatedOn;
+    private Club club;
 
 
 
