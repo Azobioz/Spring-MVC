@@ -1,5 +1,6 @@
 package com.springmvc.web.controller;
 
+import com.springmvc.web.dto.ClubDto;
 import com.springmvc.web.dto.EventDto;
 import com.springmvc.web.model.Event;
 import com.springmvc.web.service.EventService;
@@ -49,6 +50,13 @@ public class EventController {
         EventDto eventDto = eventService.findByEventId(eventId);
         model.addAttribute("event", eventDto);
         return "events-detail";
+    }
+
+    @GetMapping("/event/{eventId}/edit")
+    public String editEventForm(@PathVariable("eventId") Long eventId, Model model) {
+        EventDto event = eventService.findByEventId(eventId);
+        model.addAttribute("event", event);
+        return "events-edit";
     }
 
 }
