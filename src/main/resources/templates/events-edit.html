@@ -10,7 +10,7 @@
 
 <section layout:fragment="body" class="projects-section bg-light" id="projects">
   <div class="container">
-    <form role="form" method="post" th:action="@{/events/{clubId}(clubId=${clubId})}" th:object="${event}">
+    <form role="form" method="post" th:action="@{/event/{eventId}/edit(eventId=${eventId})}" th:object="${event}">
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="name">Title</label>
