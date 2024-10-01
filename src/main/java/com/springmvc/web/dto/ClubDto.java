@@ -1,5 +1,6 @@
 package com.springmvc.web.dto;
 
+import com.springmvc.web.model.UserEntity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -23,6 +24,7 @@ public class ClubDto {
     private String photoUrl;
     @NotEmpty(message = "No empty content")
     private String content;
+    private UserEntity createdBy;
     private LocalDateTime createOn;
     private LocalDateTime updateOn;
     private List<EventDto> events;

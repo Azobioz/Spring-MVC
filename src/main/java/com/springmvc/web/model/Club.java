@@ -27,9 +27,7 @@ public class Club {
     private Long id;
 
     private String title;
-
     private String photoUrl;
-
     private String content;
 
     @CreationTimestamp
@@ -37,6 +35,10 @@ public class Club {
 
     @UpdateTimestamp
     private LocalDateTime updateOn;
+
+    @ManyToOne
+    @JoinColumn(name = "created_by", nullable = false)
+    private UserEntity createdBy;
 
     @OneToMany(mappedBy = "club", cascade = CascadeType.REMOVE) // у одного клуба может быть много событий.
     private List<Event> events = new ArrayList<>();
