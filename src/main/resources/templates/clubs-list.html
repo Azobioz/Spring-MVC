@@ -48,7 +48,9 @@
                             <p th:text="${club.title}" class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
                         </div>
                         <a class="btn btn-primary" th:href="@{/clubs/{clubId}(clubId=${club.id})}">View</a>
-                        <a class="btn btn-primary" th:href="@{/clubs/{clubId}/edit(clubId=${club.id})}">Edit</a>
+                        <div th:if="${user.id} == ${club.createdBy.id}">
+                            <a class="btn btn-primary" th:href="@{/clubs/{clubId}/edit(clubId=${club.id})}">Edit</a>
+                        </div>
                     </div>
                 </div>
             </div>
