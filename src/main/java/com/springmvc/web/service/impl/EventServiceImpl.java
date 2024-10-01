@@ -1,5 +1,6 @@
 package com.springmvc.web.service.impl;
 
+import com.springmvc.web.dto.ClubDto;
 import com.springmvc.web.dto.EventDto;
 import com.springmvc.web.model.Club;
 import com.springmvc.web.model.Event;
@@ -57,6 +58,8 @@ public class EventServiceImpl implements EventService {
     public void deleteEvent(Long eventId) {
         eventRepository.deleteById(eventId);
     }
+
+
 
 
 }

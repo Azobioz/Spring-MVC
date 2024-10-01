@@ -3,9 +3,11 @@ package com.springmvc.web.controller;
 import com.springmvc.web.dto.ClubDto;
 import com.springmvc.web.dto.EventDto;
 import com.springmvc.web.model.Club;
+import com.springmvc.web.model.Event;
 import com.springmvc.web.model.UserEntity;
 import com.springmvc.web.security.SecurityUtil;
 import com.springmvc.web.service.ClubService;
+import com.springmvc.web.service.EventService;
 import com.springmvc.web.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,11 +23,13 @@ public class ClubController {
 
     private ClubService clubService;
     private UserService userService;
+    private EventService eventService;
 
     @Autowired
-    public ClubController(ClubService clubService, UserService userService) {
+    public ClubController(ClubService clubService, UserService userService, EventService eventService) {
         this.clubService = clubService;
         this.userService = userService;
+        this.eventService = eventService;
     }
 
     @GetMapping("/clubs")

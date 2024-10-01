@@ -1,5 +1,6 @@
 package com.springmvc.web.service;
 
+import com.springmvc.web.dto.ClubDto;
 import com.springmvc.web.dto.EventDto;
 import com.springmvc.web.model.Event;
 

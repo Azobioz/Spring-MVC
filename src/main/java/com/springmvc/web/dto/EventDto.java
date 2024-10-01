@@ -44,5 +44,4 @@ public class EventDto {
     private Club club;
 
 
-
 }

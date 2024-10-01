@@ -48,7 +48,6 @@ public class EventController {
             user = userService.findByUsername(username);
             model.addAttribute("user", user);
         }
-
         model.addAttribute("user", user);
         model.addAttribute("events", events);
         return "events-list";
@@ -105,6 +104,11 @@ public class EventController {
     public String deleteEvent(@PathVariable("eventId") Long eventId) {
         eventService.deleteEvent(eventId);
         return "redirect:/events";
+    }
+
+    @GetMapping("/events/clubs/new")
+    public String createClub() {
+        return "redirect:/clubs/new";
     }
 
 }
