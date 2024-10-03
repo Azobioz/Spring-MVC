@@ -8,6 +8,33 @@ body {
 
 }
 
+.created-by-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 100px;
+    color: #555;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    bottom: 650px;
+    left: 750px;
+}
+
+.link-to-github {
+    font-family: 'Arial', sans-serif;
+    font-size: 100px;
+    color: #007BFF;
+    text-decoration: none;
+    position: relative;
+    left: 750px;
+    bottom: 600px;
+    transition: color 0.3s ease; /
+}
+
+.link-to-github:hover {
+    color: #f89b0e;
+}
+
 .image-block {
     width: 100%;
     height: 100%;
@@ -16,10 +43,8 @@ body {
     object-fit: cover;
     margin-top: 300px;
     margin-bottom: 200px;
-    margin-left: 600px;
+    margin-left: 150px;
 }
-
-
 
 
 .image-block a {
